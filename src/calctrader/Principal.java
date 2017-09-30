@@ -11,8 +11,15 @@ public class Principal {
         MediaMovel transportarMedia = new MediaMovel();
         System.out.printf("Media Transportada -> %d\n", transportarMedia.getConvertPeriodo(1, 15, 20));
         
-        CustoTotal custoCompraVenda = new CustoTotal();
-        System.out.printf("Custos Totais -> %.2f\n", custoCompraVenda.getCustos(5,1, 5, 0.53, 0.59, 0.1166181, 0.60, 3.15));
+        CustoTotal Custos = new CustoTotal();
+
+        Custos.setCustos(5,2, 9, 0.53, 0.59, 0.1166181, 0.60, 3.15, 50, 0);
+        System.out.printf("Custos por Contrato (Dólar Cheio) -> %.2f\n", Custos.getCustos());
+
+
+        Custos.setCustos(1,1, 9, 0.53, 0.59, 0.1166181, 0.60, 3.15, 50, 22);
+        System.out.printf("Custos por Contrato (Mini Dólar) -> %.2f\n", Custos.getCustos());
+
         
         
         
