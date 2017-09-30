@@ -5,6 +5,7 @@ public class CustoTotal {
     private int quantidade;
     private double corretagem;
     private double taxaIss;
+    private double custoISS;
     private double emolumentos;
     private double registroVariavel;
     private double registroFixo;
@@ -14,11 +15,13 @@ public class CustoTotal {
     private double custoCompraVenda;
     private double incentivoDayTrade;
     private double incentivoMiniContratos;
+    private double taxaPermanenciaDiaria;
+    private int permanenciaDias;
+    private double fatorReducao;
     
-    private double custoISS;
     
     
-    public void setCustos (int quantidadeContratos, double custoCorretagem, double taxaISSCorretagem, double custoEmolumentos, double custoRegistroVariavel, double custoRegistroFixo, double custoLiquidacao, double dolarReferencial, double taxaIncentivoDayTrade, double taxaIncentivoMiniContratos){
+    public void setCustos (int quantidadeContratos, double custoCorretagem, double taxaISSCorretagem, double custoEmolumentos, double custoRegistroVariavel, double custoRegistroFixo, double custoLiquidacao, double dolarReferencial, double taxaIncentivoDayTrade, double taxaIncentivoMiniContratos, double taxaPermanenciaDiaria, int permanenciaDias, double fatorReducao, double CAt, double Ct, double Vt){
         
         this.quantidade = quantidadeContratos;
         this.corretagem = custoCorretagem;
@@ -30,6 +33,9 @@ public class CustoTotal {
         this.dolarReferencial = dolarReferencial;
         this.incentivoDayTrade = taxaIncentivoDayTrade;
         this.incentivoMiniContratos = taxaIncentivoMiniContratos;
+        this.taxaPermanenciaDiaria = taxaPermanenciaDiaria;
+        this.permanenciaDias = permanenciaDias;
+        this.fatorReducao = fatorReducao;
         
         if (this.dolarReferencial == 0){
             this.dolarReferencial = 1;
@@ -62,7 +68,24 @@ public class CustoTotal {
         this.emolumentos = ((this.emolumentos*this.incentivoDayTrade) * this.incentivoMiniContratos )*this.quantidade;
         this.registroVariavel = ((this.registroVariavel*this.incentivoDayTrade) * this.incentivoMiniContratos);
         
-        this.custoUnitario = this.corretagem + this.custoISS + this.registroVariavel + (this.emolumentos+this.registroFixo);
+        
+        
+        /*
+        CAt-1 = Somatório de todas as posições mantidas em aberto no dia anterior;
+        Ct + Vt = Somatório de compras e vendas realizadas para o contrato em questão na data t;
+        */
+        
+        double CA_CV = (CAt-(this.fatorReducao*(Ct+Vt)));
+        
+        if (CA_CV > 0){
+        this.taxaPermanenciaDiaria = (this.taxaPermanenciaDiaria * this.permanenciaDias);
+        this.taxaPermanenciaDiaria = this.taxaPermanenciaDiaria*CA_CV;    
+        }else{
+        this.taxaPermanenciaDiaria = 0;
+        }
+        
+        
+        this.custoUnitario = this.corretagem + this.custoISS + this.registroVariavel + (this.emolumentos+this.registroFixo) + this.taxaPermanenciaDiaria;
         
         this.custoCompraVenda = this.custoUnitario*2;
         
