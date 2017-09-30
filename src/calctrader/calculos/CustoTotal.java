@@ -21,7 +21,7 @@ public class CustoTotal {
     
     
     
-    public void setCustos (int quantidadeContratos, double custoCorretagem, double taxaISSCorretagem, double custoEmolumentos, double custoRegistroVariavel, double custoRegistroFixo, double custoLiquidacao, double dolarReferencial, double taxaIncentivoDayTrade, double taxaIncentivoMiniContratos, double taxaPermanenciaDiaria, int permanenciaDias, double fatorReducao, double CAt, double Ct, double Vt){
+    public void setCustosTotais (int quantidadeContratos, double custoCorretagem, double taxaISSCorretagem, double custoEmolumentos, double custoRegistroVariavel, double custoRegistroFixo, double custoLiquidacao, double dolarReferencial, double taxaIncentivoDayTrade, double taxaIncentivoMiniContratos, double taxaPermanenciaDiaria, int permanenciaDias, double fatorReducao, double CAt, double Ct, double Vt){
         
         this.quantidade = quantidadeContratos;
         this.corretagem = custoCorretagem;
@@ -92,25 +92,33 @@ public class CustoTotal {
        
     }
     
-    public double getCustos (){
+    public double getCustosTotais (){
         
         return (this.custoCompraVenda);
     }
     
-    public double getCorretora(){
+    public double getCustosCorretora(){
         return (this.corretagem);
     }
    
-    public double getISS(){
+    public double getCustosISS(){
         return (this.custoISS);
     }
 
-    public double getTaxaRegistroBMF_RegVariavel(){
+    public double getCustosTaxaRegistroBMF_RegVariavel(){
         return (this.registroVariavel);
     }
 
-    public double getTaxaRegistroBMF_EmolimentosRegFixo(){
+    public double getCustosTaxaRegistroBMF_EmolimentosRegFixo(){
         return (this.emolumentos+this.registroFixo);
+    }
+    
+    public double getCustosTaxaPermanencia(){
+        return (this.taxaPermanenciaDiaria);
+    }
+    
+    public void setSpread(){
+        
     }
 
 }
