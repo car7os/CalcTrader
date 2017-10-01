@@ -2,11 +2,33 @@ package calctrader;
 
 import calctrader.calculos.MediaMovel;
 import calctrader.calculos.CustoTotal;
+import calctrader.janelas.JanelaPrincipal;
 
 
 public class Principal {
 
     public static void main(String[] args) {
+        
+        JanelaPrincipal Jprincipal = new JanelaPrincipal();
+        Jprincipal.setDefaultCloseOperation(JanelaPrincipal.EXIT_ON_CLOSE);
+        Jprincipal.setVisible(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         MediaMovel transportarMedia = new MediaMovel();
         
