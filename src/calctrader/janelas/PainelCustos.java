@@ -44,10 +44,10 @@ public class PainelCustos extends javax.swing.JPanel {
         jLabelLiquidacao = new javax.swing.JLabel();
         jTextFieldLiquidacao = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
+        jLabelIncentivosMiniContratos = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        jLabelIncentivosDayTrader = new javax.swing.JLabel();
+        jTextFieldIncentivosDayTrader = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
@@ -199,13 +199,15 @@ public class PainelCustos extends javax.swing.JPanel {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Incentivos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
 
-        jLabel8.setText("Mini Contratos :");
+        jLabelIncentivosMiniContratos.setText("Mini Contratos :");
 
-        jTextField8.setText("jTextField8");
+        jTextField8.setText("0");
+        jTextField8.setPreferredSize(new java.awt.Dimension(60, 20));
 
-        jLabel9.setText("DayTrade :");
+        jLabelIncentivosDayTrader.setText("DayTrade :");
 
-        jTextField9.setText("jTextField9");
+        jTextFieldIncentivosDayTrader.setText("50");
+        jTextFieldIncentivosDayTrader.setPreferredSize(new java.awt.Dimension(60, 20));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -215,14 +217,14 @@ public class PainelCustos extends javax.swing.JPanel {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel8))
+                        .addComponent(jLabelIncentivosMiniContratos))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
-                        .addComponent(jLabel9)))
+                        .addComponent(jLabelIncentivosDayTrader)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldIncentivosDayTrader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -230,12 +232,12 @@ public class PainelCustos extends javax.swing.JPanel {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
+                    .addComponent(jLabelIncentivosMiniContratos)
                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelIncentivosDayTrader)
+                    .addComponent(jTextFieldIncentivosDayTrader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -455,11 +457,11 @@ public class PainelCustos extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelContratos;
     private javax.swing.JLabel jLabelCorretagem;
     private javax.swing.JLabel jLabelEmolumentos;
+    private javax.swing.JLabel jLabelIncentivosDayTrader;
+    private javax.swing.JLabel jLabelIncentivosMiniContratos;
     private javax.swing.JLabel jLabelLiquidacao;
     private javax.swing.JLabel jLabelRegFixo;
     private javax.swing.JLabel jLabelRegVariavel;
@@ -475,10 +477,10 @@ public class PainelCustos extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jTextFieldContratos;
     private javax.swing.JTextField jTextFieldCorretagem;
     private javax.swing.JTextField jTextFieldEmolumentos;
+    private javax.swing.JTextField jTextFieldIncentivosDayTrader;
     private javax.swing.JTextField jTextFieldLiquidacao;
     private javax.swing.JTextField jTextFieldRegFixo;
     private javax.swing.JTextField jTextFieldRegVariavel;
