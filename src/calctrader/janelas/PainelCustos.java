@@ -49,14 +49,14 @@ public class PainelCustos extends javax.swing.JPanel {
         jLabelIncentivosDayTrader = new javax.swing.JLabel();
         jTextFieldIncentivosDayTrader = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jLabelDolarReferencial = new javax.swing.JLabel();
+        jTextFieldDolarReferencial = new javax.swing.JTextField();
+        jLabelSpreadMinimo = new javax.swing.JLabel();
+        jTextFieldSpreadMinimo = new javax.swing.JTextField();
+        jLabelValorPonto = new javax.swing.JLabel();
+        jTextFieldValorPonto = new javax.swing.JTextField();
+        jButtonCalcular = new javax.swing.JButton();
+        jButtonLimpar = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
@@ -243,21 +243,24 @@ public class PainelCustos extends javax.swing.JPanel {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Configuração", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
 
-        jLabel10.setText("Dólar Referencial :");
+        jLabelDolarReferencial.setText("Dólar Referencial :");
 
-        jTextField10.setText("jTextField10");
+        jTextFieldDolarReferencial.setText("3.15");
+        jTextFieldDolarReferencial.setPreferredSize(new java.awt.Dimension(60, 20));
 
-        jLabel11.setText("Spread Minimo :");
+        jLabelSpreadMinimo.setText("Spread Minimo :");
 
-        jTextField11.setText("jTextField11");
+        jTextFieldSpreadMinimo.setText("0.5");
+        jTextFieldSpreadMinimo.setPreferredSize(new java.awt.Dimension(60, 20));
 
-        jLabel12.setText("Valor por Ponto :");
+        jLabelValorPonto.setText("Valor por Ponto :");
 
-        jTextField12.setText("jTextField12");
+        jTextFieldValorPonto.setText("10");
+        jTextFieldValorPonto.setPreferredSize(new java.awt.Dimension(60, 20));
 
-        jButton1.setText("Calcular");
+        jButtonCalcular.setText("Calcular");
 
-        jButton2.setText("Limpar");
+        jButtonLimpar.setText("Limpar");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -268,19 +271,19 @@ public class PainelCustos extends javax.swing.JPanel {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(jLabelDolarReferencial)
+                            .addComponent(jLabelSpreadMinimo, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabelValorPonto, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextFieldValorPonto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldSpreadMinimo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldDolarReferencial, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton2)
+                        .addComponent(jButtonLimpar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
+                        .addComponent(jButtonCalcular)))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -288,20 +291,20 @@ public class PainelCustos extends javax.swing.JPanel {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelDolarReferencial)
+                    .addComponent(jTextFieldDolarReferencial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelSpreadMinimo)
+                    .addComponent(jTextFieldSpreadMinimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel12)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelValorPonto)
+                    .addComponent(jTextFieldValorPonto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButtonCalcular)
+                    .addComponent(jButtonLimpar))
                 .addContainerGap())
         );
 
@@ -418,7 +421,7 @@ public class PainelCustos extends javax.swing.JPanel {
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -444,11 +447,8 @@ public class PainelCustos extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
+    private javax.swing.JButton jButtonCalcular;
+    private javax.swing.JButton jButtonLimpar;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -459,13 +459,16 @@ public class PainelCustos extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabelContratos;
     private javax.swing.JLabel jLabelCorretagem;
+    private javax.swing.JLabel jLabelDolarReferencial;
     private javax.swing.JLabel jLabelEmolumentos;
     private javax.swing.JLabel jLabelIncentivosDayTrader;
     private javax.swing.JLabel jLabelIncentivosMiniContratos;
     private javax.swing.JLabel jLabelLiquidacao;
     private javax.swing.JLabel jLabelRegFixo;
     private javax.swing.JLabel jLabelRegVariavel;
+    private javax.swing.JLabel jLabelSpreadMinimo;
     private javax.swing.JLabel jLabelTxISS;
+    private javax.swing.JLabel jLabelValorPonto;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -473,17 +476,17 @@ public class PainelCustos extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextFieldContratos;
     private javax.swing.JTextField jTextFieldCorretagem;
+    private javax.swing.JTextField jTextFieldDolarReferencial;
     private javax.swing.JTextField jTextFieldEmolumentos;
     private javax.swing.JTextField jTextFieldIncentivosDayTrader;
     private javax.swing.JTextField jTextFieldLiquidacao;
     private javax.swing.JTextField jTextFieldRegFixo;
     private javax.swing.JTextField jTextFieldRegVariavel;
+    private javax.swing.JTextField jTextFieldSpreadMinimo;
     private javax.swing.JTextField jTextFieldTxISS;
+    private javax.swing.JTextField jTextFieldValorPonto;
     // End of variables declaration//GEN-END:variables
 }
