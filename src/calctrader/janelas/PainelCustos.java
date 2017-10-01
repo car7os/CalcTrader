@@ -473,6 +473,18 @@ public class PainelCustos extends javax.swing.JPanel {
         jTextFieldSpreadMinimo.setText("0");
         jTextFieldValorPonto.setText("0");
         
+        // Custos Corretora
+        jLabelCustosCorretagem.setText("Corretagem : "+0);
+        jLabelCustosTxISS.setText("Tax ISS : "+0);
+        jLabelCustosTotalCorretora.setText("Total Corretora : "+0);
+        
+        // Custos BMF
+        jLabelCustosBMFTaxRegVariavel.setText("Tx Reg BM&F (reg. variavel) : "+0);
+        jLabelCustosBMFEmolRegFixo.setText("Tx Reg BM&F (emol + reg.fixo): "+0);
+        jLabelCustosTotalBMF.setText("Total BM&F : "+0);
+        
+        
+        
     }//GEN-LAST:event_jButtonLimparActionPerformed
 
 
