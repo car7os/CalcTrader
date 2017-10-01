@@ -5,6 +5,8 @@
  */
 package calctrader.janelas;
 
+import calctrader.calculos.CustoTotal;
+
 /**
  *
  * @author PC-Desktop
@@ -255,10 +257,15 @@ public class PainelCustos extends javax.swing.JPanel {
 
         jLabelValorPonto.setText("Valor por Ponto :");
 
-        jTextFieldValorPonto.setText("10");
+        jTextFieldValorPonto.setText("50");
         jTextFieldValorPonto.setPreferredSize(new java.awt.Dimension(60, 20));
 
         jButtonCalcular.setText("Calcular");
+        jButtonCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCalcularActionPerformed(evt);
+            }
+        });
 
         jButtonLimpar.setText("Limpar");
         jButtonLimpar.addActionListener(new java.awt.event.ActionListener() {
@@ -490,6 +497,59 @@ public class PainelCustos extends javax.swing.JPanel {
         
         
     }//GEN-LAST:event_jButtonLimparActionPerformed
+
+    private void jButtonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalcularActionPerformed
+        // TODO add your handling code here:
+        
+        // Corretora
+        int contratos = Integer.parseInt(jTextFieldContratos.getText());
+        double corretagem = Double.parseDouble(jTextFieldCorretagem.getText());
+        double iss = Double.parseDouble(jTextFieldTxISS.getText());
+        
+        // BMF
+        double emolumentos = Double.parseDouble(jTextFieldEmolumentos.getText());
+        double regVariavel = Double.parseDouble(jTextFieldRegVariavel.getText());
+        double regFixo = Double.parseDouble(jTextFieldRegFixo.getText());
+        double liquidacao = Double.parseDouble(jTextFieldLiquidacao.getText());
+        
+        // Incentivos
+        double incentivoMiniContratos = Double.parseDouble(jTextFieldIncentivosMiniContratos.getText());
+        double incentivoDayTrade = Double.parseDouble(jTextFieldIncentivosDayTrader.getText());
+        
+        // Configuração
+        double dolarReferencial = Double.parseDouble(jTextFieldDolarReferencial.getText());
+        double spreadMinimo = Double.parseDouble(jTextFieldSpreadMinimo.getText());
+        double valorPonto = Double.parseDouble(jTextFieldValorPonto.getText());
+        
+        // Setar e Calcular
+        CustoTotal Custos = new CustoTotal();
+        Custos.setCustosTotais(contratos,corretagem, iss, emolumentos, regVariavel, regFixo, liquidacao, dolarReferencial, incentivoDayTrade, incentivoMiniContratos, 0,0,0,0,0,0);
+        Custos.setSpread(spreadMinimo, valorPonto);
+
+        
+        
+        // Custos Corretora
+        jLabelCustosCorretagem.setText("Corretagem : "+0);
+        jLabelCustosTxISS.setText("Tax ISS : "+0);
+        jLabelCustosTotalCorretora.setText("Total Corretora : "+0);
+        
+        // Custos BMF
+        jLabelCustosBMFTaxRegVariavel.setText("Tx Reg BM&F (reg. variavel) : "+0);
+        jLabelCustosBMFEmolRegFixo.setText("Tx Reg BM&F (emol + reg.fixo): "+0);
+        jLabelCustosTotalBMF.setText("Total BM&F : "+0);
+        
+        // Custos Totais
+        jLabelTotalCustos.setText("Total dos Custos : "+0);
+        jLabelTotalCustosCompraVenda.setText("Total Considerando Compra e Venda : "+0);
+
+        
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_jButtonCalcularActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
