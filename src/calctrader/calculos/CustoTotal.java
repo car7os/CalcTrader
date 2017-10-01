@@ -104,12 +104,21 @@ public class CustoTotal {
         return (this.custosTotais);
     }
     
-    public double getCustosCorretora(){
+    public double getCustosTotaisUnitario(){
+        return (this.custoUnitario);
+        
+    }
+    
+    public double getCustosCorretagem(){
         return (this.corretagem);
     }
    
     public double getCustosISS(){
         return (this.custoISS);
+    }
+    
+    public double getCustosCorretora(){
+        return (this.corretagem+this.custoISS);
     }
 
     public double getCustosTaxaRegistroBMF_RegVariavel(){
@@ -118,6 +127,10 @@ public class CustoTotal {
 
     public double getCustosTaxaRegistroBMF_EmolimentosRegFixo(){
         return (this.emolimentosRegFixo);
+    }
+    
+    public double getCustosBMF(){
+        return (this.registroVariavel+this.emolimentosRegFixo);
     }
     
     public double getCustosTaxaPermanencia(){

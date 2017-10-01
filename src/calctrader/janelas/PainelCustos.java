@@ -320,7 +320,7 @@ public class PainelCustos extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Custos da Corretora", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Custos da Corretora (Compra e Venda)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
 
         jLabelCustosCorretagem.setText("Corretagem :");
 
@@ -352,7 +352,7 @@ public class PainelCustos extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Custos BMFBOVESPA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Custos BMFBOVESPA (Compra e Venda)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
 
         jLabelCustosBMFTaxRegVariavel.setText("Tx Reg BM&F (reg. variavel) :");
 
@@ -386,7 +386,7 @@ public class PainelCustos extends javax.swing.JPanel {
 
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Custos Totais", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
 
-        jLabelTotalCustos.setText("Total dos Custos :");
+        jLabelTotalCustos.setText("Total dos Custos (por ordem) :");
 
         jLabelTotalCustosCompraVenda.setText("Total Considerando Compra e Venda :");
 
@@ -491,7 +491,7 @@ public class PainelCustos extends javax.swing.JPanel {
         jLabelCustosTotalBMF.setText("Total BM&F : "+0);
         
         // Custos Totais
-        jLabelTotalCustos.setText("Total dos Custos : "+0);
+        jLabelTotalCustos.setText("Total dos Custos (por ordem) : "+0);
         jLabelTotalCustosCompraVenda.setText("Total Considerando Compra e Venda : "+0);
         
         
@@ -529,18 +529,18 @@ public class PainelCustos extends javax.swing.JPanel {
         
         
         // Custos Corretora
-        jLabelCustosCorretagem.setText("Corretagem : "+0);
-        jLabelCustosTxISS.setText("Tax ISS : "+0);
-        jLabelCustosTotalCorretora.setText("Total Corretora : "+0);
+        jLabelCustosCorretagem.setText("Corretagem : "+String.format("%.2f",Custos.getCustosCorretagem()));
+        jLabelCustosTxISS.setText("Tax ISS : "+String.format("%.2f",Custos.getCustosISS()));
+        jLabelCustosTotalCorretora.setText("Total Corretora : "+String.format("%.2f",Custos.getCustosCorretora()));
         
         // Custos BMF
-        jLabelCustosBMFTaxRegVariavel.setText("Tx Reg BM&F (reg. variavel) : "+0);
-        jLabelCustosBMFEmolRegFixo.setText("Tx Reg BM&F (emol + reg.fixo): "+0);
-        jLabelCustosTotalBMF.setText("Total BM&F : "+0);
+        jLabelCustosBMFTaxRegVariavel.setText("Tx Reg BM&F (reg. variavel) : "+String.format("%.2f",Custos.getCustosTaxaRegistroBMF_RegVariavel()));
+        jLabelCustosBMFEmolRegFixo.setText("Tx Reg BM&F (emol + reg.fixo): "+String.format("%.2f",Custos.getCustosTaxaRegistroBMF_EmolimentosRegFixo()));
+        jLabelCustosTotalBMF.setText("Total BM&F : "+String.format("%.2f",Custos.getCustosBMF()));
         
         // Custos Totais
-        jLabelTotalCustos.setText("Total dos Custos : "+0);
-        jLabelTotalCustosCompraVenda.setText("Total Considerando Compra e Venda : "+0);
+        jLabelTotalCustos.setText("Total dos Custos (por ordem) : "+String.format("%.2f",Custos.getCustosTotaisUnitario()));
+        jLabelTotalCustosCompraVenda.setText("Total Considerando Compra e Venda : "+String.format("%.2f",Custos.getCustosTotais()));
 
         
         
