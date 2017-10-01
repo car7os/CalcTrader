@@ -454,24 +454,24 @@ public class PainelCustos extends javax.swing.JPanel {
         // TODO add your handling code here:
         
         // Corretora
-        jTextFieldContratos.setText("0");
-        jTextFieldCorretagem.setText("0");
-        jTextFieldTxISS.setText("0");
+        jTextFieldContratos.setText(""+0);
+        jTextFieldCorretagem.setText(""+0);
+        jTextFieldTxISS.setText(""+0);
         
         // BMF
-        jTextFieldEmolumentos.setText("0");
-        jTextFieldRegVariavel.setText("0");
-        jTextFieldRegFixo.setText("0");
-        jTextFieldLiquidacao.setText("0");
+        jTextFieldEmolumentos.setText(""+0);
+        jTextFieldRegVariavel.setText(""+0);
+        jTextFieldRegFixo.setText(""+0);
+        jTextFieldLiquidacao.setText(""+0);
         
         // Incentivos
-        jTextFieldIncentivosMiniContratos.setText("0");
-        jTextFieldIncentivosDayTrader.setText("0");
+        jTextFieldIncentivosMiniContratos.setText(""+0);
+        jTextFieldIncentivosDayTrader.setText(""+0);
         
         // Configuração
-        jTextFieldDolarReferencial.setText("0");
-        jTextFieldSpreadMinimo.setText("0");
-        jTextFieldValorPonto.setText("0");
+        jTextFieldDolarReferencial.setText(""+0);
+        jTextFieldSpreadMinimo.setText(""+0);
+        jTextFieldValorPonto.setText(""+0);
         
         // Custos Corretora
         jLabelCustosCorretagem.setText("Corretagem : "+0);
