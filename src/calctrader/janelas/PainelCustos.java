@@ -68,8 +68,9 @@ public class PainelCustos extends javax.swing.JPanel {
         jLabelCustosBMFEmolRegFixo = new javax.swing.JLabel();
         jLabelCustosTotalBMF = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelValorSpreadMinimo = new javax.swing.JLabel();
         jLabelSpreadNivelamento = new javax.swing.JLabel();
+        jLabelLucroPrejuizoSpreadMinimo = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jLabelTotalCustos = new javax.swing.JLabel();
         jLabelTotalCustosCompraVenda = new javax.swing.JLabel();
@@ -85,7 +86,7 @@ public class PainelCustos extends javax.swing.JPanel {
 
         jTextFieldContratos.setText("5");
 
-        jTextFieldCorretagem.setText("1");
+        jTextFieldCorretagem.setText("2");
 
         jTextFieldTxISS.setText("9");
 
@@ -389,9 +390,11 @@ public class PainelCustos extends javax.swing.JPanel {
 
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fator Decisão", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
 
-        jLabel1.setText("Valor do Spread Minimo : ");
+        jLabelValorSpreadMinimo.setText("Valor do Spread Minimo : ");
 
         jLabelSpreadNivelamento.setText("Spread de Nivelamento (spread necessário para não haver lucro e nem prejuíso) : ");
+
+        jLabelLucroPrejuizoSpreadMinimo.setText("Lucro/Prejuizo com Spread Minimo :");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -400,18 +403,21 @@ public class PainelCustos extends javax.swing.JPanel {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabelSpreadNivelamento))
+                    .addComponent(jLabelValorSpreadMinimo)
+                    .addComponent(jLabelSpreadNivelamento)
+                    .addComponent(jLabelLucroPrejuizoSpreadMinimo))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addComponent(jLabelValorSpreadMinimo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelSpreadNivelamento)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelLucroPrejuizoSpreadMinimo)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Custos Totais", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
@@ -532,7 +538,7 @@ public class PainelCustos extends javax.swing.JPanel {
         
         jLabelSpreadMinimo.setText("Valor do Spread Minimo : ");
         jLabelSpreadNivelamento.setText("Spread de Nivelamento (spread necessário para não haver lucro e nem prejuíso) : ");
-        
+        jLabelLucroPrejuizoSpreadMinimo.setText("Lucro/Prejuizo com Spread Minimo : ");
         
         
     }//GEN-LAST:event_jButtonLimparActionPerformed
@@ -582,8 +588,9 @@ public class PainelCustos extends javax.swing.JPanel {
         jLabelTotalCustosCompraVenda.setText("Total Considerando Compra e Venda : "+String.format("%.2f",Custos.getCustosTotais()));
 
         
-        jLabelSpreadMinimo.setText("Valor do Spread Minimo : "+Custos.getValorSpreadMinimo());
+        jLabelValorSpreadMinimo.setText("Valor do Spread Minimo d: "+String.format("%.2f",Custos.getValorMinimo()));
         jLabelSpreadNivelamento.setText("Spread de Nivelamento (spread necessário para não haver lucro e nem prejuíso) : "+String.format("%.2f",Custos.getSpredMinimoLucro()));
+        jLabelLucroPrejuizoSpreadMinimo.setText("Lucro/Prejuizo com Spread Minimo : "+ String.format("%.2f",Custos.getLucroPrejuizoSpreadMinimo()));
   
         
         
@@ -596,7 +603,6 @@ public class PainelCustos extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCalcular;
     private javax.swing.JButton jButtonLimpar;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelContratos;
     private javax.swing.JLabel jLabelCorretagem;
     private javax.swing.JLabel jLabelCustosBMFEmolRegFixo;
@@ -610,6 +616,7 @@ public class PainelCustos extends javax.swing.JPanel {
     private javax.swing.JLabel jLabelIncentivosDayTrader;
     private javax.swing.JLabel jLabelIncentivosMiniContratos;
     private javax.swing.JLabel jLabelLiquidacao;
+    private javax.swing.JLabel jLabelLucroPrejuizoSpreadMinimo;
     private javax.swing.JLabel jLabelRegFixo;
     private javax.swing.JLabel jLabelRegVariavel;
     private javax.swing.JLabel jLabelSpreadMinimo;
@@ -618,6 +625,7 @@ public class PainelCustos extends javax.swing.JPanel {
     private javax.swing.JLabel jLabelTotalCustosCompraVenda;
     private javax.swing.JLabel jLabelTxISS;
     private javax.swing.JLabel jLabelValorPonto;
+    private javax.swing.JLabel jLabelValorSpreadMinimo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

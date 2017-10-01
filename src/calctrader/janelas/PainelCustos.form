@@ -153,7 +153,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="jTextFieldCorretagem">
           <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
+            <Property name="text" type="java.lang.String" value="2"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextFieldTxISS">
@@ -630,8 +630,9 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelValorSpreadMinimo" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabelSpreadNivelamento" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelLucroPrejuizoSpreadMinimo" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -641,16 +642,18 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jLabelValorSpreadMinimo" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jLabelSpreadNivelamento" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="43" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jLabelLucroPrejuizoSpreadMinimo" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="25" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="jLabelValorSpreadMinimo">
           <Properties>
             <Property name="text" type="java.lang.String" value="Valor do Spread Minimo : "/>
           </Properties>
@@ -658,6 +661,11 @@
         <Component class="javax.swing.JLabel" name="jLabelSpreadNivelamento">
           <Properties>
             <Property name="text" type="java.lang.String" value="Spread de Nivelamento (spread necess&#xe1;rio para n&#xe3;o haver lucro e nem preju&#xed;so) : "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelLucroPrejuizoSpreadMinimo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Lucro/Prejuizo com Spread Minimo :"/>
           </Properties>
         </Component>
       </SubComponents>
