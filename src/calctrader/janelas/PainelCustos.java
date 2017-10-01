@@ -58,16 +58,16 @@ public class PainelCustos extends javax.swing.JPanel {
         jButtonCalcular = new javax.swing.JButton();
         jButtonLimpar = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        jLabelCustosCorretagem = new javax.swing.JLabel();
+        jLabelCustosTxISS = new javax.swing.JLabel();
+        jLabelCustosTotalCorretora = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        jLabelCustosBMFTaxRegVariavel = new javax.swing.JLabel();
+        jLabelCustosBMFEmolRegFixo = new javax.swing.JLabel();
+        jLabelCustosTotalBMF = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
+        jLabelTotalCustos = new javax.swing.JLabel();
+        jLabelTotalCustosCompraVenda = new javax.swing.JLabel();
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Corretora", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
         jPanel1.setToolTipText("");
@@ -310,11 +310,11 @@ public class PainelCustos extends javax.swing.JPanel {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Custos da Corretora", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
 
-        jLabel13.setText("Corretagem :");
+        jLabelCustosCorretagem.setText("Corretagem :");
 
-        jLabel14.setText("Tax ISS :");
+        jLabelCustosTxISS.setText("Tax ISS :");
 
-        jLabel15.setText("Total Corretora :");
+        jLabelCustosTotalCorretora.setText("Total Corretora :");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -323,30 +323,30 @@ public class PainelCustos extends javax.swing.JPanel {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel13))
+                    .addComponent(jLabelCustosTotalCorretora)
+                    .addComponent(jLabelCustosTxISS)
+                    .addComponent(jLabelCustosCorretagem))
                 .addContainerGap(91, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel13)
+                .addComponent(jLabelCustosCorretagem)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel14)
+                .addComponent(jLabelCustosTxISS)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel15)
+                .addComponent(jLabelCustosTotalCorretora)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Custos BMFBOVESPA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
 
-        jLabel16.setText("Tx Reg BM&F (reg. variavel) :");
+        jLabelCustosBMFTaxRegVariavel.setText("Tx Reg BM&F (reg. variavel) :");
 
-        jLabel17.setText("Tx Reg BM&F (emol + reg.fixo):");
+        jLabelCustosBMFEmolRegFixo.setText("Tx Reg BM&F (emol + reg.fixo):");
 
-        jLabel18.setText("Total BM&F :");
+        jLabelCustosTotalBMF.setText("Total BM&F :");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -355,28 +355,28 @@ public class PainelCustos extends javax.swing.JPanel {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel18)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel17))
+                    .addComponent(jLabelCustosTotalBMF)
+                    .addComponent(jLabelCustosBMFTaxRegVariavel)
+                    .addComponent(jLabelCustosBMFEmolRegFixo))
                 .addContainerGap(90, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel16)
+                .addComponent(jLabelCustosBMFTaxRegVariavel)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel17)
+                .addComponent(jLabelCustosBMFEmolRegFixo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel18)
+                .addComponent(jLabelCustosTotalBMF)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Custos Totais", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
 
-        jLabel19.setText("Total dos Custos :");
+        jLabelTotalCustos.setText("Total dos Custos :");
 
-        jLabel20.setText("Total Considerando Compra e Venda :");
+        jLabelTotalCustosCompraVenda.setText("Total Considerando Compra e Venda :");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -385,17 +385,17 @@ public class PainelCustos extends javax.swing.JPanel {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel20)
-                    .addComponent(jLabel19))
+                    .addComponent(jLabelTotalCustosCompraVenda)
+                    .addComponent(jLabelTotalCustos))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel19)
+                .addComponent(jLabelTotalCustos)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel20)
+                .addComponent(jLabelTotalCustosCompraVenda)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -449,16 +449,14 @@ public class PainelCustos extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCalcular;
     private javax.swing.JButton jButtonLimpar;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabelContratos;
     private javax.swing.JLabel jLabelCorretagem;
+    private javax.swing.JLabel jLabelCustosBMFEmolRegFixo;
+    private javax.swing.JLabel jLabelCustosBMFTaxRegVariavel;
+    private javax.swing.JLabel jLabelCustosCorretagem;
+    private javax.swing.JLabel jLabelCustosTotalBMF;
+    private javax.swing.JLabel jLabelCustosTotalCorretora;
+    private javax.swing.JLabel jLabelCustosTxISS;
     private javax.swing.JLabel jLabelDolarReferencial;
     private javax.swing.JLabel jLabelEmolumentos;
     private javax.swing.JLabel jLabelIncentivosDayTrader;
@@ -467,6 +465,8 @@ public class PainelCustos extends javax.swing.JPanel {
     private javax.swing.JLabel jLabelRegFixo;
     private javax.swing.JLabel jLabelRegVariavel;
     private javax.swing.JLabel jLabelSpreadMinimo;
+    private javax.swing.JLabel jLabelTotalCustos;
+    private javax.swing.JLabel jLabelTotalCustosCompraVenda;
     private javax.swing.JLabel jLabelTxISS;
     private javax.swing.JLabel jLabelValorPonto;
     private javax.swing.JPanel jPanel1;
