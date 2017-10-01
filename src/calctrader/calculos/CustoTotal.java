@@ -152,5 +152,9 @@ public class CustoTotal {
     public double getSpredMinimoLucro(){
         return (this.custosTotais/(this.valorPonto*this.quantidade));
     }
+    
+    public double getValorSpreadMinimo(){
+        return (this.spreadMinimo*this.valorPonto);
+    }
 
 }
