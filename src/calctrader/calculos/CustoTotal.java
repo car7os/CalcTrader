@@ -9,15 +9,20 @@ public class CustoTotal {
     private double emolumentos;
     private double registroVariavel;
     private double registroFixo;
+    private double emolimentosRegFixo;
     private double liquidacao;
     private double dolarReferencial;
     private double custoUnitario;
-    private double custoCompraVenda;
+    private double custosTotais;
     private double incentivoDayTrade;
     private double incentivoMiniContratos;
     private double taxaPermanenciaDiaria;
     private int permanenciaDias;
     private double fatorReducao;
+    
+    private double spreadMinimo;
+    private double valorPonto;
+    private double valorMinimo;
     
     
     
@@ -86,15 +91,17 @@ public class CustoTotal {
         
         
         this.custoUnitario = this.corretagem + this.custoISS + this.registroVariavel + (this.emolumentos+this.registroFixo) + this.taxaPermanenciaDiaria;
+        this.custosTotais = this.custoUnitario*2;
+        this.corretagem = (this.corretagem)*2;
+        this.custoISS = (this.custoISS)*2;
+        this.registroVariavel = (this.registroVariavel)*2;
+        this.emolimentosRegFixo = (this.emolumentos+this.registroFixo)*2;
         
-        this.custoCompraVenda = this.custoUnitario*2;
-        
-       
+                
     }
     
     public double getCustosTotais (){
-        
-        return (this.custoCompraVenda);
+        return (this.custosTotais);
     }
     
     public double getCustosCorretora(){
@@ -110,15 +117,27 @@ public class CustoTotal {
     }
 
     public double getCustosTaxaRegistroBMF_EmolimentosRegFixo(){
-        return (this.emolumentos+this.registroFixo);
+        return (this.emolimentosRegFixo);
     }
     
     public double getCustosTaxaPermanencia(){
         return (this.taxaPermanenciaDiaria);
     }
     
-    public void setSpread(){
+    public void setSpread(double spreadMinimo, double valorPorPonto){
+        this.spreadMinimo = spreadMinimo;
+        this.valorPonto = valorPorPonto; // no caso do dolar são 50 reais, pois os 5 contratos é 250 e o ponto minimo é 125
         
+        this.valorMinimo = (this.spreadMinimo = this.spreadMinimo*(this.valorPonto*this.quantidade));
+    }
+    
+    public double getValorMinimo (){
+        
+        return (this.valorMinimo);
+    }
+    
+    public double getSpredMinimoLucro(){
+        return (this.custosTotais/(this.valorPonto*this.quantidade));
     }
 
 }
