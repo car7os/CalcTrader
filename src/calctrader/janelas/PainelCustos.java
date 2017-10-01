@@ -483,6 +483,10 @@ public class PainelCustos extends javax.swing.JPanel {
         jLabelCustosBMFEmolRegFixo.setText("Tx Reg BM&F (emol + reg.fixo): "+0);
         jLabelCustosTotalBMF.setText("Total BM&F : "+0);
         
+        // Custos Totais
+        jLabelTotalCustos.setText("Total dos Custos : "+0);
+        jLabelTotalCustosCompraVenda.setText("Total Considerando Compra e Venda : "+0);
+        
         
         
     }//GEN-LAST:event_jButtonLimparActionPerformed
