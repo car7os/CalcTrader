@@ -588,7 +588,7 @@ public class PainelCustos extends javax.swing.JPanel {
         jLabelTotalCustosCompraVenda.setText("Total Considerando Compra e Venda : "+String.format("%.2f",Custos.getCustosTotais()));
 
         
-        jLabelValorSpreadMinimo.setText("Valor do Spread Minimo d: "+String.format("%.2f",Custos.getValorMinimo()));
+        jLabelValorSpreadMinimo.setText("Valor do Spread Minimo : "+String.format("%.2f",Custos.getValorMinimo()));
         jLabelSpreadNivelamento.setText("Spread de Nivelamento (spread necessário para não haver lucro e nem prejuíso) : "+String.format("%.2f",Custos.getSpredMinimoLucro()));
         jLabelLucroPrejuizoSpreadMinimo.setText("Lucro/Prejuizo com Spread Minimo : "+ String.format("%.2f",Custos.getLucroPrejuizoSpreadMinimo()));
   
