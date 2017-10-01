@@ -45,7 +45,7 @@ public class PainelCustos extends javax.swing.JPanel {
         jTextFieldLiquidacao = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jLabelIncentivosMiniContratos = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        jTextFieldIncentivosMiniContratos = new javax.swing.JTextField();
         jLabelIncentivosDayTrader = new javax.swing.JLabel();
         jTextFieldIncentivosDayTrader = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
@@ -201,8 +201,8 @@ public class PainelCustos extends javax.swing.JPanel {
 
         jLabelIncentivosMiniContratos.setText("Mini Contratos :");
 
-        jTextField8.setText("0");
-        jTextField8.setPreferredSize(new java.awt.Dimension(60, 20));
+        jTextFieldIncentivosMiniContratos.setText("0");
+        jTextFieldIncentivosMiniContratos.setPreferredSize(new java.awt.Dimension(60, 20));
 
         jLabelIncentivosDayTrader.setText("DayTrade :");
 
@@ -223,7 +223,7 @@ public class PainelCustos extends javax.swing.JPanel {
                         .addComponent(jLabelIncentivosDayTrader)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldIncentivosMiniContratos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldIncentivosDayTrader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -233,7 +233,7 @@ public class PainelCustos extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelIncentivosMiniContratos)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldIncentivosMiniContratos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelIncentivosDayTrader)
@@ -261,6 +261,11 @@ public class PainelCustos extends javax.swing.JPanel {
         jButtonCalcular.setText("Calcular");
 
         jButtonLimpar.setText("Limpar");
+        jButtonLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLimparActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -445,6 +450,31 @@ public class PainelCustos extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldRegVariavelActionPerformed
 
+    private void jButtonLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimparActionPerformed
+        // TODO add your handling code here:
+        
+        // Corretora
+        jTextFieldContratos.setText("0");
+        jTextFieldCorretagem.setText("0");
+        jTextFieldTxISS.setText("0");
+        
+        // BMF
+        jTextFieldEmolumentos.setText("0");
+        jTextFieldRegVariavel.setText("0");
+        jTextFieldRegFixo.setText("0");
+        jTextFieldLiquidacao.setText("0");
+        
+        // Incentivos
+        jTextFieldIncentivosMiniContratos.setText("0");
+        jTextFieldIncentivosDayTrader.setText("0");
+        
+        // Configuração
+        jTextFieldDolarReferencial.setText("0");
+        jTextFieldSpreadMinimo.setText("0");
+        jTextFieldValorPonto.setText("0");
+        
+    }//GEN-LAST:event_jButtonLimparActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCalcular;
@@ -476,12 +506,12 @@ public class PainelCustos extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextFieldContratos;
     private javax.swing.JTextField jTextFieldCorretagem;
     private javax.swing.JTextField jTextFieldDolarReferencial;
     private javax.swing.JTextField jTextFieldEmolumentos;
     private javax.swing.JTextField jTextFieldIncentivosDayTrader;
+    private javax.swing.JTextField jTextFieldIncentivosMiniContratos;
     private javax.swing.JTextField jTextFieldLiquidacao;
     private javax.swing.JTextField jTextFieldRegFixo;
     private javax.swing.JTextField jTextFieldRegVariavel;
